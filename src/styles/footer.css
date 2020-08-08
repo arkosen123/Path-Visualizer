@@ -1,0 +1,22 @@
+.footer{
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.foot-links{
+    margin-right: 1.5vw;
+}
+
+.foot-scroll{
+    font-size: 1rem;
+    margin-left: 45vw;
+    margin-right: 47vw;
+    margin-bottom: 2vh;
+}
+
+.foot-scroll:focus, .foot-scroll:hover{
+    text-decoration: underline;
+}

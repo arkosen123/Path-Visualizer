@@ -1,0 +1,117 @@
+.node{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 1.5vw;
+    width: 1.75vw;
+}
+
+.fa {
+    font-size: 1.5vw;
+}
+
+.fa-certificate {
+    color: rgb(151, 47, 47);
+}
+
+.box{
+    height: 1.5vw;
+    width: 1.75vw;
+    display: inline-block;
+}
+
+.wall-still{
+    background-color: grey; 
+}
+
+.wall{
+    background-color: grey;
+    animation-name: wall;
+    animation-duration: 1.5s;
+}
+
+@keyframes wall {
+    from {background-color: rgba(255, 250, 250, 0.75);}
+    to {background-color: grey;}
+}
+
+.notClick{
+    background-color: white;
+}
+
+.weighted{
+    background-color: blue;
+}
+
+.visited {
+    background-color: rgba(4, 241, 151, 0.705);
+}
+
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+  
+@keyframes visitedAnimation {
+    0% {
+      transform: scale(0.3);
+      background-color: rgba(2, 2, 54, 0.788);
+      border-radius: 100%;
+    }
+  
+    50% {
+      background-color: rgba(37, 95, 170, 0.75);
+      border-radius: 50%;
+    }
+  
+    75% {
+      transform: scale(1.3);
+      background-color: rgba(10, 247, 184, 0.808);
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(4, 241, 151, 0.705);
+    }
+}
+
+.path{
+    background-color: rgba(255, 254, 105,0.9);
+}
+
+.node-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+  
+@keyframes shortestPath {
+    0% {
+      transform: scale(0.5);
+      background-color: rgb(252, 252, 106);
+      border-radius: 65%;
+    }
+  
+    50% {
+      transform: scale(1.5);
+      background-color: rgb(245, 195, 88);
+      border-radius: 30%;
+    }
+  
+    100% {
+      transform: scale(1);
+      background-color: rgba(255, 254, 105,0.9) ;
+    }
+}
