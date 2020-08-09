@@ -8,10 +8,10 @@ import './styles/footer.css';
 import Main from './components/main';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
+ReactDOM.render((
   <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
+    <Main/>
+  </React.StrictMode>),
   document.getElementById('root')
 );
 

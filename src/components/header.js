@@ -8,6 +8,7 @@ class Header extends Component {
         this.state = {
             value: this.props.highWeight,
             showWeight: false,
+            redirect: false,
         };
         this.handleChange = this.handleChange.bind(this);
         this.toggleShowWeight = this.toggleShowWeight.bind(this);
@@ -34,14 +35,19 @@ class Header extends Component {
     }
 
     handleMinus() {
-        if(this.state.value !== 2) {
+        if (this.state.value !== 2) {
             this.setState({ value: this.state.value - 1 }, () => {
                 this.props.addWeightAll(this.state.value);
             });
         }
     }
 
+    help() {
+
+    }
+
     render() {
+
         let button_real = this.props.isRealTime ? "btn-danger" : "btn-primary";
         let button_weight = this.props.isWeight ? "btn-danger" : "btn-primary"
         return (
@@ -81,6 +87,7 @@ class Header extends Component {
                         </ButtonGroup>
                     </Collapse>
                 </div>
+                <Button className="items" href="http://path-visualiser-algorithms.herokuapp.com/help/">Help</Button>
             </Navbar>
         )
     }
