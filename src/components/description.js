@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Description = ((props) => {
-    let des = "";
+    let des = `To know how this website works click on "Help"`;
     if (props.type === "Dijkstra")
         des = "Dijkstra algorithm always provide the shortest path and can work with weights.";
     else if (props.type === "A-star")

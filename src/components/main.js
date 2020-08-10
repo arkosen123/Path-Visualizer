@@ -36,7 +36,6 @@ class Main extends Component {
         this.resetWalls = this.resetWalls.bind(this);
         this.resetAll = this.resetAll.bind(this);
         this.changeType = this.changeType.bind(this);
-        this.scroll = this.scroll.bind(this);
         this.changeSpeed = this.changeSpeed.bind(this);
         this.addWeight = this.addWeight.bind(this);
         this.addWeightAll = this.addWeightAll.bind(this);
@@ -331,8 +330,6 @@ class Main extends Component {
             const endNode = grid[isEnd.row][isEnd.col];
             const visitedNodes = algorithm(type, grid, startNode, endNode);
             const shortestPath = getShortestPath(type, startNode, endNode, grid);
-            console.log(visitedNodes);
-            console.log(shortestPath);
             this.animateAlgorithm(visitedNodes, shortestPath, startNode, endNode);
             this.setState({
                 visitedNodes: visitedNodes,
@@ -419,11 +416,6 @@ class Main extends Component {
         }, () => this.initialise(this.state.grid));
     }
 
-    scroll() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-    }
-
     changeSpeed(speed) {
         this.setState({ speed: speed });
     }
@@ -484,7 +476,7 @@ class Main extends Component {
                     })}
                 </div>
                 <div>
-                    <Footer scroll={() => this.scroll()}></Footer>
+                    <Footer></Footer>
                 </div>
             </div>
         )

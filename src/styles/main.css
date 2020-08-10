@@ -15,12 +15,12 @@ html, body {
 }
 
 .header{
-    height: 135px;
+    height: 160px;
     width: 100%;
 }
 
 .navbar{
-    height: 150px;
+    height: 160px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -121,6 +121,7 @@ input {
     font-size: 12px;
     font-weight: 500;
     font-style: italic;
+    cursor: default;
 }
 
 .algo-desp {
@@ -135,6 +136,7 @@ input {
     animation-name: algo;
     animation-duration: 4s;
     animation-iteration-count: infinite;
+    cursor: default;
 }
 
 @keyframes algo {

@@ -7,8 +7,4 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.get('/help', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'help.html'));
-});
-
 app.listen(process.env.PORT || 8080);

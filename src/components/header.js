@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavDropdown, Button, ButtonGroup, Collapse } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
@@ -78,7 +79,7 @@ class Header extends Component {
                 </Nav>
                 <Button disabled={this.props.length | (this.props.type === "") | (this.props.type === "Greedy") | (this.props.type === "DFS") | (this.props.type === "BFS")} className={`items ${button_weight}`} onClick={() => this.props.addWeight()}>Add Weight</Button>
                 <div className="show-weight">
-                    <Button onClick={() => this.toggleShowWeight()} className="items">Weight Value</Button>
+                    <Button onClick={() => this.toggleShowWeight()} className="items">Weight Cost</Button>
                     <Collapse in={this.state.showWeight}>
                         <ButtonGroup>
                             <Button onClick={() => { this.handlePlus() }} className="button-compact"> + </Button>
@@ -87,7 +88,9 @@ class Header extends Component {
                         </ButtonGroup>
                     </Collapse>
                 </div>
-                <Button className="items" href="http://path-visualiser-algorithms.herokuapp.com/help/">Help</Button>
+                <Link to={'/help'}>
+                    <Button className="items">Help</Button>
+                </Link>
             </Navbar>
         )
     }

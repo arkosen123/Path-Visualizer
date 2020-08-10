@@ -1,0 +1,55 @@
+.help-info {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5vw;
+    padding: 5vw;
+    background-color: rgb(205, 233, 192);
+    border: 2px dotted green;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.help-btn {
+    margin-left: 5vw;
+    display: inline-block;
+    width: 150px;
+    margin-top: 3vh;
+    color: yellow;
+    background-color: rgb(74, 191, 226);
+}
+
+.help-heading {
+    display: inline-block;
+    margin-left: 10vw;
+    color: brown;
+    margin-bottom: 10vh;
+    cursor: default;
+}
+
+.help-topic {
+    margin-bottom: 5vh;
+}
+
+li {
+    margin-top: 2vh;
+    list-style-type: square;
+}
+
+h3 {
+    letter-spacing: 0.04rem;
+    margin: 2vh 2vw;
+    display: inline-block;
+    color: rgb(230, 167, 84);
+}
+
+.help-main {
+    color: rgb(42, 92, 92);
+}
+
+.help-demo {
+    color: rgb(133, 173, 22)
+}
+
+.help-instru {
+    display: inline-block;
+    margin-left: 1vw;
+}

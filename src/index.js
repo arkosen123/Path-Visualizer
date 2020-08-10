@@ -5,13 +5,14 @@ import 'font-awesome/css/font-awesome.min.css'
 import './styles/main.css';
 import './styles/node.css';
 import './styles/footer.css';
-import Main from './components/main';
+import './styles/help.css'
+import App from './app';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render((
+ReactDOM.render(
   <React.StrictMode>
-    <Main/>
-  </React.StrictMode>),
+    <App/>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
