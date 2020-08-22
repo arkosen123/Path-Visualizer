@@ -43,17 +43,13 @@ class Header extends Component {
         }
     }
 
-    help() {
-
-    }
-
     render() {
 
         let button_real = this.props.isRealTime ? "btn-danger" : "btn-primary";
         let button_weight = this.props.isWeight ? "btn-danger" : "btn-primary"
         return (
             <Navbar bg="primary">
-                <Navbar.Brand href="#" className="items head">Path Visualiser</Navbar.Brand>
+                <Navbar.Brand href="#" className="items head">Path Visualizer</Navbar.Brand>
                 <Nav>
                     <NavDropdown title="Pick Algorithm" className="items">
                         <NavDropdown.Item onClick={() => this.props.changeType("Dijkstra")}>Dijkstra Algorithm</NavDropdown.Item>

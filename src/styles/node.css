@@ -8,6 +8,16 @@
     height: 1.5vw;
     width: 1.75vw;
     cursor: pointer;
+    animation-name: start;
+    animation-duration: 5s;
+}
+
+@keyframes start {
+    from {
+        border: 5px solid rgb(250, 250, 143);
+        transform: scale(0.25);
+    }
+    to {background-color: 1px solid black;}
 }
 
 .fa {

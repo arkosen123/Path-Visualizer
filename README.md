@@ -1,68 +1,33 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a PathFinding Visualization Project, built on React and Express.
 
-## Available Scripts
+There are basically few algorithms which help in generating a path between the StartNode and EndNode. So let me introduce you to the algorithms:
 
-In the project directory, you can run:
+Dijkstra's Algorithm (weighted): The basic algorithm for pathfinding, it completely guarantees the shortest path and can work with weights.
 
-### `npm start`
+A* Search (weighted): Indeed the best pathfinding algorithm, uses heuristics to guarantee the shortest path, hence it's much like an informed search, so much faster than Dijkstra's Algorithm. It also works fine with weight.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Greedy Best-first Search: A faster, more heuristic-heavy version of A*, does not guarantee the shortest path. It is purely based on heuristics so does not work well with weights.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Breath-first Search (unweighted): A good algorithm, guarantees the shortest path. It's more or less similar to Dijkstra, just in contrast the former doesn't work with weights.
 
-### `npm test`
+Depth-first Search (unweighted): A very bad algorithm for pathfinding, does not guarantee the shortest path for sure. It just randomly search every single node to it's maximum depth.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+So now let me demonstrate how it works.... 
 
-### `npm run build`
+All of the algorithms on this application are adapted for a 2D grid, where 90 degree turns have a cost of One and movements from a node to another have a cost of One. Note that diagonal movements are restricted.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firstly there is an empty grid presented in front of you. You first need to click once for the StartNode and then for the EndNode.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+After that you are requested to choose an algorithm. Note that some algorithms are unweighted, while others are weighted. Unweighted algorithms do not take weight nodes into account, whereas weighted ones do. So the "Add Weight" button for unweighted algorithms has been disabled. Additionally, not all algorithms guarantee the shortest path.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Now further you can create some walls in the grid. You just need to click or you may click and drag to create walls. Walls are impenetrable, meaning that a path cannot cross through them.
 
-### `npm run eject`
+Then for weighted algorithms, you may click the button "Add weight" and then click anywhere in the grid to add some weights. Weights are not impassable. They are simply more costly to move through. In this application, moving through a weight node has a default cost of Five. Make sure to click back the Add Weight Button once you are done with adding weights
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You may simply change the default cost of weight by clicking on the "Weight Cost" button to see an input space which can be incremented or decremented by small buttons attached to it. Note that the weight must greater than One.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can also drag and drop the EndNode to automatically start the animation again for that new endpoint. Note it's only applicable when an algorithm is working and no change in walls, weights and StartNode is done.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Finally comes the most interesting part of this part, that is the real-time visualisation. Note that it's only available for uninformed search algorithms. You can just hover anywhere in the grid, the hovered node will become the EndNode after you click the "Real Time" button and it will let you analyse how the algorithm works for different endpoints instantly. Make sure you click back Real Time button after you are done.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Use the navbar buttons to visualize algorithms and to do other interesting stuffs! There is also a Reset Dropdown Button which allows you to erase the inimation, or the walls and weights or even everything from the grid. There is also a button which controls the speed of the imanition.
